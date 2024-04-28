@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.UserActivity">
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/user_name"
+            android:hint="@string/user_hint_name"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name" />
+
+        <EditText
+            android:id="@+id/user_phone"
+            android:hint="@string/user_hint_phone"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="phone" />
+
+<!--        Это базовый элемент - как простой input-->
+        <EditText
+            android:id="@+id/user_email"
+            android:hint="@string/user_hint_email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="emailAddress" />
+
+        <RadioGroup
+            android:id="@+id/user_sex_group"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/user_sex_male"
+                android:layout_width="wrap_content"
+                android:hint="@string/user_hint_male"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:id="@+id/user_sex_female"
+                android:layout_width="wrap_content"
+                android:hint="@string/user_hint_female"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+<!--        расширенные возможности (тени, скругления, градиенты и тд) class="form-group" -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/user_hint_dob">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="8dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:inputType="none"
+                android:onClick="showDatePickerDialog" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clear"
+            android:onClick="clearUser"
+            />
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
