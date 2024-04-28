@@ -31,6 +31,8 @@ public class UserModel {
 
     private String email;
 
+    private String town;
+
     private UserSexEnum sex;
 
     private String phone;
@@ -70,6 +72,13 @@ public class UserModel {
         this.email = email;
         sendNotification();
     }
+
+    public String getTown() { return town; }
+    public void setTown(String town) {
+        this.town = town;
+        sendNotification();
+    }
+
 
     public Date getDob() {
         return dob;

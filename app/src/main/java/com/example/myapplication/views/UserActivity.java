@@ -24,7 +24,7 @@ public class UserActivity extends AppCompatActivity {
         // Получаем текст из строки ресурса
         String toastMessage = getResources().getString(rId);
 
-// Выводим сообщение
+        // Выводим сообщение
         Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
     }
 

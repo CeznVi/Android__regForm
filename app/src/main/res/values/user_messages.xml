@@ -3,9 +3,11 @@
     <string name="user_hint_name"> Enter name </string>
     <string name="user_hint_phone"> Enter phone </string>
     <string name="user_hint_email"> Enter email </string>
+    <string name="user_hint_town"> Enter your town</string>
+
     <string name="user_hint_sex"> Sex </string>
     <string name="user_hint_male"> Male </string>
     <string name="user_hint_female"> Female </string>
-    <string name="user_hint_dob"> Enter DOB </string>
+    <string name="user_hint_dob"> Enter date of birthday </string>
     <string name="user_toast_select_sex"> Select Sex </string>
 </resources>

@@ -26,8 +26,6 @@ public class UserViewModel implements OnModelChange {
         this.currentUser.setViewModel(this);
     }
 
-
-
     View findViewById(int id) {
         return activity.findViewById(id);
     }
@@ -64,6 +62,7 @@ public class UserViewModel implements OnModelChange {
         ((EditText) findViewById(R.id.user_name)).setText(currentUser.getName());
         ((EditText) findViewById(R.id.user_phone)).setText(currentUser.getPhone());
         ((EditText) findViewById(R.id.user_email)).setText(currentUser.getEmail());
+        ((EditText) findViewById(R.id.user_town)).setText(currentUser.getTown());
 
         // Вот тут настроить вывод данных
         ((EditText) findViewById(R.id.user_dob)).setText(currentUser.getDob().toLocaleString());
