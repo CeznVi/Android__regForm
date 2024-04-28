@@ -32,7 +32,7 @@ public class UserModel {
     private String email;
 
     private String town;
-
+    private String country;
     private UserSexEnum sex;
 
     private String phone;
@@ -79,6 +79,12 @@ public class UserModel {
         sendNotification();
     }
 
+
+    public String getCountry() { return country; }
+    public void setCountry(String country) {
+        this.country = country;
+        sendNotification();
+    }
 
     public Date getDob() {
         return dob;

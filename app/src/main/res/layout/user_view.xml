@@ -47,6 +47,14 @@
             android:layout_height="wrap_content"
             android:autofillHints="addressCity" />
 
+        <EditText
+            android:id="@+id/user_country"
+            android:hint="@string/user_hint_country"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="countryName" />
+
         <RadioGroup
             android:id="@+id/user_sex_group"
             android:layout_width="wrap_content"

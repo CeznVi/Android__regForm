@@ -63,6 +63,8 @@ public class UserViewModel implements OnModelChange {
         ((EditText) findViewById(R.id.user_phone)).setText(currentUser.getPhone());
         ((EditText) findViewById(R.id.user_email)).setText(currentUser.getEmail());
         ((EditText) findViewById(R.id.user_town)).setText(currentUser.getTown());
+        ((EditText) findViewById(R.id.user_country)).setText(currentUser.getCountry());
+
 
         // Вот тут настроить вывод данных
         ((EditText) findViewById(R.id.user_dob)).setText(currentUser.getDob().toLocaleString());
@@ -82,6 +84,9 @@ public class UserViewModel implements OnModelChange {
         currentUser.setName(((EditText) findViewById(R.id.user_name)).getText().toString());
         currentUser.setPhone(((EditText) findViewById(R.id.user_phone)).getText().toString());
         currentUser.setEmail(((EditText) findViewById(R.id.user_email)).getText().toString());
+        currentUser.setTown(((EditText) findViewById(R.id.user_town)).getText().toString());
+        currentUser.setCountry(((EditText) findViewById(R.id.user_country)).getText().toString());
+
 
         // Находим RadioGroup по его идентификатору
         RadioGroup radioGroup = (RadioGroup) findViewById(R.id.user_sex_group);
